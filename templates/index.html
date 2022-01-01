@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <title>Welcome to :: Ashoka</title>
+  </head>
+  <body>
+    <!-- content -->
+    <div class="body-wrapper">
+      <!-- header -->
+    <header id="headerMain">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    </header>
+      <div class="container vh-100">
+        <div class="flex-start vh-100">
+          <div class="login-wrapper">
+            <div class="login-caption">
+              <h3 class="mt-5">Login</h3>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea.</p>
+            </div>
+            <!-- forms -->
+            <form action="login" method="POST">
+              <div class="form-group">
+                <label><img src="static/img/user-line.svg" alt="login user"></label>
+                <input type="text" placeholder="Username" name="user_name" class="form-control" required="">
+              </div>
+              <div class="form-group">
+                <label><img src="static/img/lock.svg" alt="login user"></label>
+                <input type="password" placeholder="Password" name="password" class="form-control" required="">
+              </div>
+              <div class="text-right plr-3"><a href="#3link">Forgot Password?</a></div>
+             <div class="flex-btwn bordered">
+                <button class="btn btn-left btn-outline">
+                <span>Don't have an account?</span>
+              Sign Up</button>
+              <button class="btn btn-right btn-black">Sign In <img src="static/img/arrow-right-line.svg" alt="right arrow"></button>
+              {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+              {% endif %}
+             </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="static/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="static/js/wow.min.js"></script>
+<script type="text/javascript" src="static/js/default.js"></script>
+<script type="text/javascript">
+    new WOW().init();
+  </script> 
+  
+  </body>
+</html>
