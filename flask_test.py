@@ -1,5 +1,5 @@
 from flask import Flask,render_template, redirect, url_for, request
-
+import dbcon
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,10 +12,17 @@ def login():
     error = None
     if request.method == 'POST':
         #db validation here
-        if request.form['user_name'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Invalid Credentials. Please try again.'
-        else:
+        user = request.form['user_name']
+        passd = request.form['password']
+        mycursor = dbcon.connection.cursor()
+        mycursor.execute("SELECT mobile_number,password FROM business_user1 where mobile_number = %s and password = %s", (user,passd))
+        account = mycursor.fetchone()
+        #account = True
+  
+        if account:
             return render_template('document.html')
+        else:
+            error = 'Invalid Credentials. Please try again.'
     return render_template('index.html', error=error)
 
 @app.route('/home', methods=['GET', 'POST'])
