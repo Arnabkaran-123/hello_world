@@ -1,6 +1,5 @@
 from flask import Flask,render_template, redirect, url_for, request
 import dbcon
-
 app = Flask(__name__)
 
 @app.route('/')
