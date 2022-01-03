@@ -11,18 +11,3 @@ connection = pymysql.connect(host='5.196.109.133',
 
 
 
-
-
-
-
-
-
-
-
-	
-	
-  
-=======
-
-
->>>>>>> df5837c7d0f0cee76d46eb47c8e0c9e1b7f36213
